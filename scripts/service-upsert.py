@@ -206,6 +206,10 @@ def service_common_args(
         ]
     params += [f'--privileged={"true" if privileged else "false"}']
     params += [f'--skip-cache={"true" if skip_cache else "false"}']
+
+    # HOTFIX
+    params += ['--deployment-strategy=rolling']
+
     return params
 
 
